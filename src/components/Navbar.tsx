@@ -11,19 +11,19 @@ export default function Navbar() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href="#" className="text-xl font-bold text-primary">
-            Milton<span className="text-accent">.</span>dev
+          <Link href="#" className="text-xl font-bold text-primary group">
+            Milton<span className="text-accent group-hover:animate-pulse">.</span>dev
           </Link>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link href="#proyectos" className="text-gray-600 hover:text-primary transition-colors">
+            <Link href="#proyectos" className="text-gray-600 hover:text-primary transition-all duration-300 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-accent after:transition-all after:duration-300 hover:after:w-full">
               Proyectos
             </Link>
-            <Link href="#habilidades" className="text-gray-600 hover:text-primary transition-colors">
+            <Link href="#habilidades" className="text-gray-600 hover:text-primary transition-all duration-300 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-accent after:transition-all after:duration-300 hover:after:w-full">
               Habilidades
             </Link>
-            <Link href="#contacto" className="text-gray-600 hover:text-primary transition-colors">
+            <Link href="#contacto" className="text-gray-600 hover:text-primary transition-all duration-300 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-accent after:transition-all after:duration-300 hover:after:w-full">
               Contacto
             </Link>
           </div>
@@ -31,7 +31,7 @@ export default function Navbar() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 rounded-md text-gray-600 hover:text-primary"
+            className="md:hidden p-2 rounded-md text-gray-600 hover:text-primary transition-all duration-300 hover:rotate-90 hover:scale-110"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               {isOpen ? (
@@ -44,19 +44,17 @@ export default function Navbar() {
         </div>
 
         {/* Mobile Menu */}
-        {isOpen && (
-          <div className="md:hidden py-4 space-y-4">
-            <Link href="#proyectos" className="block text-gray-600 hover:text-primary" onClick={() => setIsOpen(false)}>
-              Proyectos
-            </Link>
-            <Link href="#habilidades" className="block text-gray-600 hover:text-primary" onClick={() => setIsOpen(false)}>
-              Habilidades
-            </Link>
-            <Link href="#contacto" className="block text-gray-600 hover:text-primary" onClick={() => setIsOpen(false)}>
-              Contacto
-            </Link>
-          </div>
-        )}
+        <div className={`md:hidden overflow-hidden transition-all duration-300 ${isOpen ? 'max-h-48 opacity-100 py-4 space-y-4' : 'max-h-0 opacity-0'}`}>
+          <Link href="#proyectos" className="block text-gray-600 hover:text-primary hover:translate-x-2 transition-all duration-300" onClick={() => setIsOpen(false)}>
+            Proyectos
+          </Link>
+          <Link href="#habilidades" className="block text-gray-600 hover:text-primary hover:translate-x-2 transition-all duration-300" onClick={() => setIsOpen(false)}>
+            Habilidades
+          </Link>
+          <Link href="#contacto" className="block text-gray-600 hover:text-primary hover:translate-x-2 transition-all duration-300" onClick={() => setIsOpen(false)}>
+            Contacto
+          </Link>
+        </div>
       </div>
     </nav>
   );

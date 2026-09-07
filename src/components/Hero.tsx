@@ -8,15 +8,18 @@ export default function Hero() {
         <div className="flex flex-col md:flex-row items-center gap-12">
           {/* Foto de perfil */}
           <div className="flex-shrink-0">
-            <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden shadow-lg ring-4 ring-primary/20">
-              <Image
-                src="/profile.jpeg"
-                alt="Milton Ronald Villarreal Minango"
-                width={256}
-                height={256}
-                className="w-full h-full object-cover"
-                priority
-              />
+            <div className="relative group">
+              <div className="absolute -inset-2 bg-gradient-to-r from-primary to-accent rounded-full opacity-75 group-hover:opacity-100 blur-lg group-hover:blur-xl transition-all duration-500 animate-pulse"></div>
+              <div className="relative w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden shadow-lg ring-4 ring-primary/20 group-hover:ring-accent/40 transition-all duration-500 group-hover:scale-105">
+                <Image
+                  src="/profile.jpeg"
+                  alt="Milton Ronald Villarreal Minango"
+                  width={256}
+                  height={256}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  priority
+                />
+              </div>
             </div>
           </div>
 
@@ -35,13 +38,13 @@ export default function Hero() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
               <Link
                 href="#proyectos"
-                className="px-8 py-3 bg-primary text-white rounded-lg font-medium hover:bg-primary-light transition-colors shadow-lg"
+                className="px-8 py-3 bg-primary text-white rounded-lg font-medium hover:bg-primary-light transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
               >
                 Ver Proyectos
               </Link>
               <Link
                 href="#contacto"
-                className="px-8 py-3 border-2 border-primary text-primary rounded-lg font-medium hover:bg-primary hover:text-white transition-colors"
+                className="px-8 py-3 border-2 border-primary text-primary rounded-lg font-medium hover:bg-primary hover:text-white transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg"
               >
                 Contactarme
               </Link>
