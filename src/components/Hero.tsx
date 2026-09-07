@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Hero() {
   return (
@@ -7,8 +8,15 @@ export default function Hero() {
         <div className="flex flex-col md:flex-row items-center gap-12">
           {/* Foto de perfil */}
           <div className="flex-shrink-0">
-            <div className="w-48 h-48 md:w-64 md:h-64 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center text-white text-6xl font-bold shadow-lg">
-              MV
+            <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden shadow-lg ring-4 ring-primary/20">
+              <Image
+                src="/profile.jpeg"
+                alt="Milton Ronald Villarreal Minango"
+                width={256}
+                height={256}
+                className="w-full h-full object-cover"
+                priority
+              />
             </div>
           </div>
 

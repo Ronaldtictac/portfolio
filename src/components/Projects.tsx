@@ -1,9 +1,10 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const projects = [
   {
     title: "Ama Store",
-    emoji: "🛒",
+    image: "/projects/ama-store.png",
     description: "E-commerce Full Stack con autenticación JWT, catálogo de productos, carrito de compras y panel de administración.",
     tech: ["Next.js 15", "TypeScript", "React 19", "Prisma", "PostgreSQL"],
     demo: "https://proyecto-ama-store.vercel.app/",
@@ -11,7 +12,7 @@ const projects = [
   },
   {
     title: "New Life Cup",
-    emoji: "⚽",
+    image: "/projects/new-life-cup.png",
     description: "Plataforma de gestión de torneos deportivos con control de partidos en vivo, brackets y app Android.",
     tech: ["Vanilla JS", "Vite 5", "Supabase", "Capacitor"],
     demo: "https://proyecto-new-life.vercel.app/",
@@ -19,7 +20,7 @@ const projects = [
   },
   {
     title: "Bodega Armados",
-    emoji: "📦",
+    image: "/projects/bodega-armados.png",
     description: "App móvil para gestión de inventarios con modo offline, sincronización con backend y autenticación JWT.",
     tech: ["Flutter", "Django", "DRF", "PostgreSQL", "SQLite"],
     demo: "https://gorgeous-otter-80323b.netlify.app/",
@@ -27,7 +28,7 @@ const projects = [
   },
   {
     title: "Linga AI",
-    emoji: "🤖",
+    image: "/projects/linga-ai.png",
     description: "Aplicación de aprendizaje de idiomas potenciada por IA con speech-to-text y text-to-speech.",
     tech: ["Next.js 16", "React 19", "TypeScript", "Gemini", "Groq"],
     demo: "https://lingo-ai-dusky.vercel.app/",
@@ -50,9 +51,15 @@ export default function Projects() {
               key={project.title}
               className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
             >
-              {/* Screenshot placeholder */}
-              <div className="h-48 bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center">
-                <span className="text-6xl">{project.emoji}</span>
+              {/* Screenshot */}
+              <div className="h-48 relative overflow-hidden bg-gray-100">
+                <Image
+                  src={project.image}
+                  alt={`Screenshot de ${project.title}`}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
               </div>
 
               {/* Content */}
