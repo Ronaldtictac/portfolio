@@ -27,12 +27,12 @@ const projects = [
     repo: "https://gitlab.com/vita-group8455532/bodega_armados",
   },
   {
-    title: "Linga AI",
-    image: "/projects/linga-ai.png",
+    title: "Lingo AI",
+    image: "/projects/lingo-ai.png",
     description: "Aplicación de aprendizaje de idiomas potenciada por IA con speech-to-text y text-to-speech.",
     tech: ["Next.js 16", "React 19", "TypeScript", "Gemini", "Groq"],
     demo: "https://lingo-ai-dusky.vercel.app/",
-    repo: "#",
+    repo: "#" 
   },
 ];
 
