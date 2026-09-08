@@ -35,12 +35,12 @@ export default function Contact() {
   ];
 
   return (
-    <section id="contacto" className="py-20 bg-gray-50">
+    <section id="contacto" className="py-20 bg-gray-50 dark:bg-gray-800">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Contacto</h2>
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">Contacto</h2>
           <div className="w-20 h-1 bg-accent mx-auto"></div>
-          <p className="mt-4 text-gray-600">¿Tienes un proyecto en mente? ¡Hablemos!</p>
+          <p className="mt-4 text-gray-600 dark:text-gray-400">¿Tienes un proyecto en mente? ¡Hablemos!</p>
         </div>
 
         <div className="max-w-2xl mx-auto">
@@ -50,16 +50,16 @@ export default function Contact() {
                 key={contact.name}
                 href={contact.href}
                 target={contact.name !== "Email" ? "_blank" : undefined}
-                className="group flex items-center gap-4 p-6 bg-white rounded-xl shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 border border-transparent hover:border-primary/20 cursor-pointer"
+                className="group flex items-center gap-4 p-6 bg-white dark:bg-gray-900 rounded-xl shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 border border-transparent hover:border-primary/20 dark:hover:border-accent/30 cursor-pointer"
               >
-                <div className="flex-shrink-0 w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300 group-hover:rotate-12 group-hover:scale-110">
+                <div className="flex-shrink-0 w-12 h-12 bg-primary/10 dark:bg-accent/20 rounded-full flex items-center justify-center text-primary dark:text-accent group-hover:bg-primary group-hover:text-white transition-all duration-300 group-hover:rotate-12 group-hover:scale-110">
                   {contact.icon}
                 </div>
                 <div className="flex-1">
-                  <h3 className="font-semibold text-gray-900 group-hover:text-primary transition-colors duration-300">{contact.name}</h3>
-                  <p className="text-gray-600 text-sm group-hover:text-gray-800 transition-colors duration-300">{contact.value}</p>
+                  <h3 className="font-semibold text-gray-900 dark:text-white group-hover:text-primary dark:group-hover:text-accent transition-colors duration-300">{contact.name}</h3>
+                  <p className="text-gray-600 dark:text-gray-400 text-sm group-hover:text-gray-800 dark:group-hover:text-gray-200 transition-colors duration-300">{contact.value}</p>
                 </div>
-                <svg className="w-5 h-5 text-gray-400 group-hover:text-primary group-hover:translate-x-2 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5 text-gray-400 dark:text-gray-500 group-hover:text-primary dark:group-hover:text-accent group-hover:translate-x-2 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
               </Link>

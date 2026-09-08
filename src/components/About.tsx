@@ -9,18 +9,18 @@ export default function About() {
   ];
 
   return (
-    <section id="sobre-mi" className="py-20 bg-white">
+    <section id="sobre-mi" className="py-20 bg-white dark:bg-gray-900">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Sobre Mí</h2>
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">Sobre Mí</h2>
           <div className="w-20 h-1 bg-accent mx-auto"></div>
         </div>
 
         <div className="max-w-3xl mx-auto">
-          <p className="text-lg text-gray-600 leading-relaxed mb-8 text-center">
+          <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-8 text-center">
             Desarrollador Full-Stack autodidacta y estudiante de Desarrollo de Software
             en el Instituto Tecnoecuatoriano. Me aplica crear aplicaciones completas desde
-            cero, y ya tengo <span className="font-semibold text-primary">4 proyectos desplegados en producción</span>.
+            cero, y ya tengo <span className="font-semibold text-primary dark:text-accent">4 proyectos desplegados en producción</span>.
             Busco mi primera oportunidad profesional para aportar valor en un equipo de desarrollo.
           </p>
 
@@ -29,10 +29,10 @@ export default function About() {
             {techStack.map((tech) => (
               <div
                 key={tech.name}
-                className="flex flex-col items-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors"
+                className="flex flex-col items-center p-4 bg-gray-50 dark:bg-gray-800 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
               >
                 <span className="text-3xl mb-2">{tech.icon}</span>
-                <span className="text-sm font-medium text-gray-700">{tech.name}</span>
+                <span className="text-sm font-medium text-gray-700 dark:text-gray-300">{tech.name}</span>
               </div>
             ))}
           </div>

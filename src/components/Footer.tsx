@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="py-8 bg-primary text-white">
+    <footer className="py-8 bg-primary dark:bg-gray-950 text-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <p className="text-sm">
           © {new Date().getFullYear()} Milton Villarreal. Hecho con{" "}
